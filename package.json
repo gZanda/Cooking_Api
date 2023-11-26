@@ -1,0 +1,25 @@
+{
+  "name": "sd_api",
+  "version": "1.0.0",
+  "description": "Simple WEB REST API to communicate with ChatGPT API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gZanda/Cooking_Api.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "https://github.com/gZanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gZanda/Cooking_Api/issues"
+  },
+  "homepage": "https://github.com/gZanda/Cooking_Api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
