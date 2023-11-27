@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const db = require('./Database/dbConfig.js');
 
 // GET Request
 app.get('/', (req, res) => {

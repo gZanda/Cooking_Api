@@ -22,3 +22,14 @@ npm install
 ```bash
 node app.js
 ```
+
+### 📌 Se necessário, instale:
+
+- express -> WebServer
+- pg -> Postgre connection
+
+```bash
+npm install express
+
+npm install pg
+```

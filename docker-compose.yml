@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: sd_database
+      POSTGRES_USER: zanda
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
