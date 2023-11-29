@@ -3,11 +3,18 @@ const app = express();
 const port = 3000;
 const sequelize = require('./database/sequelize');
 const Foods = require('./database/models/Foods');
-const bodyParser = require('body-parser');
+require("dotenv").config();
+const {OpenAI} = require("openai");
+
+// ------------------ OpenAI Config ------------------
+
+const openai = new OpenAI({
+  apiKey: `${process.env.OPEN_AI_KEY}`
+});
 
 // ------------------ Middleware ------------------
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 // ------------------ Database ------------------
 
@@ -42,6 +49,27 @@ app.get('/foods/', (req, res) => {
     .then(foods => res.json(foods))
     .catch(error => res.json(error));
 });
+
+// GET API 1
+app.get('/ask1', async (req, res) => {
+  const chatCompletion = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo",
+    messages: [{"role": "user", "content": "Hello!"}],
+  });
+  console.log(chatCompletion.choices[0].message);
+  res.send(chatCompletion.choices[0].message);
+});
+
+// GET API 2
+app.get('/ask2', async (req, res) => {
+  const completion = await openai.completions.create({
+    model: "text-davinci-003",
+    prompt: "This story begins",
+    max_tokens: 30,
+  });
+  console.log(completion.choices[0].text);
+});
+
 
 // ------------------ Server Config ------------------
 

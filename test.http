@@ -1,0 +1,7 @@
+# Chat GPT question
+GET http://localhost:3000/ask1
+Content-Type: application/json
+
+{}
+
+###

@@ -35,4 +35,8 @@ npm install express
 npm install pg
 
 npm install sequelize
+
+npm install openai@^4.0.0
+
+npm install axios
 ```
