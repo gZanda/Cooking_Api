@@ -54,7 +54,7 @@ app.get('/foods/', (req, res) => {
 app.get('/ask1', async (req, res) => {
   const chatCompletion = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
-    messages: [{"role": "user", "content": "Hello!"}],
+    messages: [{"role": "user", "content": "Hey chat, are you ok ?"}],
   });
   console.log(chatCompletion.choices[0].message);
   res.send(chatCompletion.choices[0].message);
