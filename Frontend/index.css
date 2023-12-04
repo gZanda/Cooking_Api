@@ -1,57 +1,57 @@
 .container {
-    text-align: center; 
+    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 .registro {
-    text-align: center; 
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 40px;
-   
 }
 
 .botao {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     background-color: #ff7f50;
     border-radius: 8px;
     padding: 10px 0px 0px 10px;
-    width: 150px; 
+    width: 150px;
     height: 30px;
-    text-align: center; 
+    text-align: center;
     margin-bottom: 50px;
 }
 
-.tabela td, .tabela th {
+.tabela td,
+.tabela th {
     border: 1px solid #000;
     padding: 15px 20px;
-    text-align: center;   
+    text-align: center;
 }
 
 .table-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    height: 20vh; 
+    height: 20vh;
     margin-bottom: 50px;
 }
 
 .botaogerar {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     background-color: #ff7f50;
     border-radius: 8px;
     padding: 10px 0px 0px 10px;
-    width: 150px; 
+    width: 150px;
     height: 30px;
-    text-align: center; 
-    margin-bottom: 50px;  
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-a{
-    color: #000000; 
+a {
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
@@ -61,15 +61,14 @@ p {
 }
 
 .textarea-container {
-    text-align: center; /
+    text-align: center; /* aqui tinha um erro de centralização */
 }
 
-#textoGrande {
-    width: 450px; 
+.textoGrande {
+    width: 450px;
     height: 400px;
     padding: 10px;
-    display: inline-block; 
-    vertical-align: top; 
-    margin: 30px; 
-  
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px;
 }
