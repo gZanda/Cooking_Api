@@ -24,8 +24,9 @@
 }
 
 .tabela {
-    border-collapse: collapse; /* mesclar as bordas pra ficar *bonitinho */
+    border-collapse: collapse;
     width: 100%;
+    margin: 0 auto; 
 }
 
 .tabela td, .tabela th {
