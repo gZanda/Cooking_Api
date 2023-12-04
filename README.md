@@ -2,7 +2,7 @@
 
 ### 📌 Certifique-se de ter instalado:
 
-- Node.js
+- node.js
 - npm
 
 ```bash
