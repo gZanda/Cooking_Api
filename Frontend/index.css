@@ -23,8 +23,12 @@
     margin-bottom: 50px;
 }
 
-.tabela td,
-.tabela th {
+.tabela {
+    border-collapse: collapse; /* mesclar as bordas pra ficar *bonitinho */
+    width: 100%;
+}
+
+.tabela td, .tabela th {
     border: 1px solid #000;
     padding: 15px 20px;
     text-align: center;
@@ -61,7 +65,7 @@ p {
 }
 
 .textarea-container {
-    text-align: center; /* aqui tinha um erro de centralização */
+    text-align: center;
 }
 
 .textoGrande {
