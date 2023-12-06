@@ -6,21 +6,34 @@
     <title>Cook GPT</title>
     <link rel="stylesheet" href="teste.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        /* Adicionando um pouco de estilo para posicionar a imagem acima do título */
+        #inicio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #inicio img {
+            width: 300px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-
     <div class="container">
         <form id="foodForm">
-             <section id="inicio"> 
+            <section id="inicio"> 
                 <img src="C:\Users\nicol\OneDrive\Desktop\Cooking_Api\img\prato.png" alt="Imagem Alimento" width="300"> 
                 <div>
-                   <h1> Cook GPT</h1>
-                  <p> As melhores receitas na palma da sua mão </p>
+                    <h1> Cook GPT</h1>
+                    <p> As melhores receitas na palma da sua mão </p>
                 </div>
-              </section> 
+            </section> 
 
-              <br>
-              
+            <br>
+            
             <label for="foodName">Alimento</label>
             <br>
             <input type="text" id="foodName" required>
@@ -40,13 +53,13 @@
 
         <table id="foodsTable">
             <thead>
-              <tr>
-                <th>Alimento</th>
-                <th>Quantidade</th>
-              </tr>
+                <tr>
+                    <th>Alimento</th>
+                    <th>Quantidade</th>
+                </tr>
             </thead>
             <tbody>
-              <!-- Table content will be added dynamically with JavaScript -->
+                <!-- Table content will be added dynamically with JavaScript -->
             </tbody>
         </table>
 
@@ -68,4 +81,3 @@
     <script src="teste.js"></script>
 </body>
 </html>
-
