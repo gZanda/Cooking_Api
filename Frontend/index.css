@@ -1,91 +1,65 @@
-body {
-    font-family: 'Verdana', sans-serif;
-    background-image: url('Frontend/bg.png'); /* Caminho correto para sua imagem */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.hidden {
+    display: none;
 }
 
-h1, h2, p, label, a {
-    font-family: 'Verdana', sans-serif;
+#loading {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#responseContainer {
+    white-space: pre-line; /* This will preserve newlines and spaces */
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
-.registro {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-}
-
-.botao, .botaogerar {
-    display: block;
-    margin: 0 auto;
-    background-color: yellow;
-    border: 2px solid orange;
-    border-radius: 8px;
+input {
+    margin-bottom: 10px;
     padding: 10px;
-    width: 150px;
-    height: 30px;
-    text-align: center;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background-color: #f2f2f2;
 }
 
-.tabela {
+table {
     border-collapse: collapse;
-    width: 80%;
-    margin: 0 auto;
+    width: 50%;
+    margin: 20px auto;
 }
 
-.tabela td, .tabela th {
-    border: 1px solid #000;
-    padding: 15px 20px;
-    text-align: center;
+th, td {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
 }
 
-.table-container {
-    text-align: center;
-    margin-top: 5vh;
-    margin-left: 20%;
+th {
+background-color: #f2f2f2;
 }
 
-.botaogerar {
-    display: block;
-    margin: 0 auto;
-    background-color: yellow;
-    border: 2px solid orange;
-    border-radius: 8px;
+button {
     padding: 10px;
-    width: 150px;
-    height: 30px;
-    text-align: center;
-    margin-bottom: 30px; /* Ajuste conforme necessário para descer o botão */
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background-color: #f2f2f2;
+    cursor: pointer;
 }
-
-a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-p {
-    font-size: 18px;
-}
-
-.textarea-container {
-    text-align: center;
-}
-
-.textoGrande {
-    width: 450px;
-    height: 400px;
-    padding: 10px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 30px;
+  
+#inicio {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 30px 24px 30px;
 }
