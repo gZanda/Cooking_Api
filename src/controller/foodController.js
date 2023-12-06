@@ -52,7 +52,7 @@ const ask2 = async (req, res) => {
         // Ask Chat Gpt to generate a Recipe using the list of foods
         const chatCompletion = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
-            messages: [{"role": "user", "content": `Ei chat, se passando por um cozinheiro de um restaurante de comida popular e considerando que você dispõe de especiarias, temperos e outros produtos essenciais de cozinha ilimitados, gere uma receita simples com os ingredientes: ${message}`}],
+            messages: [{"role": "user", "content": `Ei chat, sendo cozinheiro de um restaurante de comida popular e considerando que você dispõe de especiarias, temperos e outros produtos essenciais de cozinha, gere uma receita simples com os ingredientes: ${message}. Seja breve e direto, cite o título da receita, liste apenas os ingredientes, quantidades (não precisa utilizar toda a quantidade que foi passada na lista, faça porções normais, não muito grandes) e o modo de preparo de forma não muito detalhada. Sem textos longos e desnecessários, por favor.`}],
         });
         console.log(chatCompletion.choices[0].message);
         return res.json(chatCompletion.choices[0].message);
