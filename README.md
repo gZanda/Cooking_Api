@@ -17,10 +17,36 @@ npm -v
 npm install
 ```
 
+### 📌 Configure suas várias de Ambiente ".env" segundo o modelo:
+
+```bash
+PORT=<sua_porta>
+
+DB_DIALECT=postgres
+DB_HOST=localhost
+DB_DATABASE=<sua_database>
+DB_USERNAME=<seu_username>
+DB_PASSWORD=<sua_senha>
+
+OPEN_AI_KEY=<sua_open_ai_key>
+```
+
+### 📌 Banco de Dados no Docker:
+
+- Build do Composer:
+```bash
+docker compose build --no-cache
+```
+
+- Execução:
+```bash
+docker compose up -d
+```
+
 ### 📌 Execute a aplicação:
 
 ```bash
-node app.js
+node server.js
 ```
 
 ### 📌 Se necessário, instale:
@@ -46,3 +72,5 @@ npm install nodemon
 
 npm install cors
 ```
+
+
