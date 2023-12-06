@@ -1,4 +1,4 @@
-## 📜 Introdução:
+## 📜 Introdução
 
 ### 📌 Descrição:
 O sistema foi desenvolvido utilizando Node.js e Express para criar um servidor web eficiente.  
@@ -7,13 +7,15 @@ A aplicação incorpora uma API de chat GPT da OpenAI para respostas contextuais
 
 ### 📌 Tecnologias:
 
-- Node.js
-- Express
-- PostgreSQL
-- Sequelize ORM
-- Cors Middleware
-- Open Ai API
-- Axios
+- Node - v20.10.0
+- Npm - v10.2.3
+- Express - v4.18.2
+- PostgreSQL - Latest Docker Image
+- Sequelize ORM - v6.35.1
+- Cors Middleware - v2.8.5
+- Open AI API - v4.20.1
+- Axios - v1.6.2
+- Dotenv - v16.3.1
 
 ## 📜 Como executar a aplicação
 
@@ -21,7 +23,6 @@ A aplicação incorpora uma API de chat GPT da OpenAI para respostas contextuais
 
 - node.js
 - npm
-
 ```bash
 node -v
 
@@ -60,17 +61,22 @@ docker compose build --no-cache
 docker compose up -d
 ```
 
-### 📌 Execute a aplicação:
+### 📌 Rode a aplicação:
 
 ```bash
 node server.js
 ```
 
-### 📌 Se necessário, instale:
+### 📌 Se necessário, instale localmente:
 
 - express -> WebServer
-- pg -> Postgre connection
+- pg -> PostgreSQL Connection
 - sequelize -> ORM
+- Open AI -> API ChatGPT
+- Axios -> Fetch Library
+- Dotenv -> Ambiente Variables
+- Cors -> Security Middleware
+- Nodemon -> WebServer Autorefresh for Development
 
 ```bash
 npm install express
@@ -85,9 +91,9 @@ npm install axios
 
 npm install dotenv
 
-npm install nodemon
-
 npm install cors
+
+npm install nodemon
 ```
 
 
