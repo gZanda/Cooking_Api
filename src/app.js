@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const sequelize = require('./database/sequelize');
+const db = require('./database/db');
 const Foods = require('./database/models/Foods');
 require("dotenv").config();
 const {OpenAI} = require("openai");
@@ -19,7 +19,7 @@ app.use(express.json());
 // ------------------ Database ------------------
 
 // Database sync
-sequelize.sync({force: true})
+db.sync()
   .then(() => {
     console.log('Database & tables created!');
   })
