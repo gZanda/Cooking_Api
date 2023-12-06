@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loading = document.getElementById('loading');
     const responseContainer = document.getElementById('responseContainer');
     const registerButton = document.getElementById('registerButton');
+    const requestButton2 = document.getElementById('requestButton2');
 
     let loadingInterval;
 
@@ -24,7 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
         startLoadingAnimation();
         responseContainer.innerText = ''; // Clear previous response
 
-        // Replace 'http://localhost:3333/ask2/' with your actual API endpoint
+        // Replace 'http://localhost:3333/ask1/' with your actual API endpoint
+        const apiUrl = 'http://localhost:3333/ask1/';
+
+        axios.get(apiUrl)
+            .then(response => {
+                // Handle the data as needed
+                const data = response.data;
+                responseContainer.innerText = data.content;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                responseContainer.innerText = 'Error fetching data';
+            })
+            .finally(() => {
+                stopLoadingAnimation();
+            });
+    }
+
+    function handleRequest2() {
+        startLoadingAnimation();
+        responseContainer.innerText = ''; // Clear previous response
+
+        // Replace 'http://localhost:3333/ask1/' with your actual API endpoint
         const apiUrl = 'http://localhost:3333/ask2/';
 
         axios.get(apiUrl)
@@ -65,4 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach the submitForm function to the form submission event
     registerButton.addEventListener('click', submitForm);
+
+    // Attach the handleRequest2 function to the button click event
+    requestButton2.addEventListener('click', handleRequest2);
 });

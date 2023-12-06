@@ -26,12 +26,19 @@ const createFood = async (req, res) => {
     }
 }
 
-// Chat GPT question
+// Chat GPT Medium Recipe
 const ask1 = async (req, res) => {
     try {
+        // code to make a LIST with all the foods NAMES and AMOUNTS from the database
+        const foods = await Food.findAll();
+        // Use map to create an array of strings for each food entry
+        const foodMessages = foods.map(food => `${food.amount} de ${food.name}`);
+        // Join the array into a single string
+        const message = `[${foodMessages.join(', ')}]`;
+        // Ask Chat Gpt to generate a Recipe using the list of foods
         const chatCompletion = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
-            messages: [{"role": "user", "content": "Hey chat, are you ok ?"}],
+            messages: [{"role": "user", "content":`Sendo cozinheiro de um restaurante de comida popular ( considerando que você dispõe de especiarias, temperos e outros produtos essenciais de cozinha ), gere EM PORTUGUÊS uma receita com os ingredientes: ${message}. Seja breve e direto, invente um nome simples para a receita (NÃO ESCREVA "nome da receita:" !!! apenas escreva o nome antes de qualquer coisa), liste os ingredientes, quantidades (não precisa utilizar toda a quantidade que foi passada na lista, faça porções normais, não muito grandes) e o modo de preparo de forma não muito detalhada. Sem textos longos e desnecessários.`}],
         });
         console.log(chatCompletion.choices[0].message);
         return res.json(chatCompletion.choices[0].message);
@@ -40,7 +47,7 @@ const ask1 = async (req, res) => {
     }
 }
 
-// Chat GPT question 2
+// Chat GPT Hight Recipe
 const ask2 = async (req, res) => {
     try {
         // code to make a LIST with all the foods NAMES and AMOUNTS from the database
@@ -52,7 +59,7 @@ const ask2 = async (req, res) => {
         // Ask Chat Gpt to generate a Recipe using the list of foods
         const chatCompletion = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
-            messages: [{"role": "user", "content": `Ei chat, sendo cozinheiro de um restaurante de comida popular e considerando que você dispõe de especiarias, temperos e outros produtos essenciais de cozinha, gere uma receita simples com os ingredientes: ${message}. Seja breve e direto, cite o título da receita (sem escrever "título da receita:", apenas escreva o nome antes de qualquer coisa), liste apenas os ingredientes, quantidades (não precisa utilizar toda a quantidade que foi passada na lista, faça porções normais, não muito grandes) e o modo de preparo de forma não muito detalhada. Sem textos longos e desnecessários, por favor.`}],
+            messages: [{"role": "user", "content": `Sendo cozinheiro de um restaurante caro e refinado ( considerando que você dispõe de especiarias, temperos e outros produtos essenciais de cozinha ), gere EM PORTUGUÊS uma receita com os ingredientes: ${message}. Seja breve e direto, invente um nome em inglês que pareça caro para a receita (NÃO ESCREVA "nome da receita:" ou "title:" !!! apenas escreva o nome antes de qualquer coisa), e em português liste os ingredientes, quantidades (não precisa utilizar toda a quantidade que foi passada na lista, faça porções normais, não muito grandes) e o modo de preparo de forma não muito detalhada. Sem textos longos e desnecessários.`}],
         });
         console.log(chatCompletion.choices[0].message);
         return res.json(chatCompletion.choices[0].message);

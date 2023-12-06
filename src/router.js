@@ -11,10 +11,10 @@ router.post('/createFood/', foodController.createFood);
 // GET All Foods
 router.get('/foods/', foodController.getAllFood);
 
-// GET Chat GPT Response
+// GET Chat GPT Medium Recipe
 router.get('/ask1/', foodController.ask1);
 
-// GET Chat GPT Response 2
+// GET Chat GPT Hight Recipe
 router.get('/ask2/', foodController.ask2);
 
 module.exports = router;
