@@ -76,9 +76,9 @@ node server.js
 
 ### 📌 Instale localmente:
 
-- express -> WebServer
-- pg -> PostgreSQL Connection
-- sequelize -> ORM
+- Express -> WebServer
+- Pg -> PostgreSQL Connection
+- Sequelize -> ORM
 - Open AI -> API ChatGPT
 - Axios -> Fetch Library
 - Dotenv -> Ambiente Variables
