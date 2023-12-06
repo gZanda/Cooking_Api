@@ -1,5 +1,5 @@
 # Chat GPT question
-GET http://localhost:3000/ask1
+GET http://localhost:3333/ask1
 Content-Type: application/json
 
 {}
@@ -8,19 +8,19 @@ Content-Type: application/json
 
 # Add Food to Database
 
-POST http://localhost:3000/addFood/
+POST http://localhost:3333/addFood/
 Content-Type: application/json
 
 {
-    "name": "Pizza",
-    "amount": 300
+    "name": "Coca Cola",
+    "amount": 200
 }
 
 ###
 
 # Get All Foods From Database
 
-GET http://localhost:3000/foods/
+GET http://localhost:3333/foods/
 Content-Type: application/json
 
 {}
