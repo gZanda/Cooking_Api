@@ -24,3 +24,10 @@ GET http://localhost:3333/foods/
 Content-Type: application/json
 
 {}
+
+### Delete all foods
+
+DELETE http://localhost:3333/deleteAllFoods/
+Content-Type: application/json
+
+{}

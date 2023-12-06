@@ -11,6 +11,9 @@ router.post('/createFood/', foodController.createFood);
 // GET All Foods
 router.get('/foods/', foodController.getAllFood);
 
+// DELETE All Foods
+router.delete('/deleteAllFoods/', foodController.deleteAllFood);
+
 // GET Chat GPT Medium Recipe
 router.get('/ask1/', foodController.ask1);
 

@@ -26,6 +26,19 @@ const createFood = async (req, res) => {
     }
 }
 
+// DELETE ALL FOOD 
+const deleteAllFood = async (req, res) => {
+    try {
+        const foods = await Food.destroy({
+            where: {},
+            truncate: true
+        });
+        return res.json(foods);
+    } catch (error) {
+        return res.error(error);
+    }
+}
+
 // Chat GPT Medium Recipe
 const ask1 = async (req, res) => {
     try {
@@ -95,4 +108,5 @@ module.exports = {
     ask1,
     ask2,
     ask3,
+    deleteAllFood
 }

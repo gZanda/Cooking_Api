@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerButton = document.getElementById('registerButton');
     const requestButton2 = document.getElementById('requestButton2');
     const requestButton3 = document.getElementById('requestButton3');
+    const deleteButton = document.getElementById('deleteButton');
 
     let loadingInterval;
 
@@ -129,6 +130,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function deleteRequest(){
+        axios.delete('http://localhost:3333/deleteAllFoods/')
+        .then(response => {
+            console.log('Success:', response.data);
+            window.location.reload();
+            // You can do something here with the response if needed
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
     // Attach the handleRequest function to the button click event
     requestButton.addEventListener('click', handleRequest);
 
@@ -140,4 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach the handleRequest3 function to the button click event
     requestButton3.addEventListener('click', handleRequest3);
+
+    // Attach the deleteRequest function to the button click event
+    deleteButton.addEventListener('click', deleteRequest);
 });
