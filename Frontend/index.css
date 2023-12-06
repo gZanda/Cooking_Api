@@ -9,6 +9,12 @@
 
 #responseContainer {
     white-space: pre-line; /* This will preserve newlines and spaces */
+    background-color: #f4f4f4; /* Set your desired background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    text-align: center;
+    max-width: 600px;
 }
 
 body {
@@ -16,8 +22,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin: 0; /* Resetting default margin to 0 */
+    padding: 0; /* Resetting default padding to 0 */
+    background-image: url('./Web background 2.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+    background-attachment: fixed;
 }
 
 .container {
@@ -29,7 +40,7 @@ input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #dddddd;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
 }
 
 table {
@@ -39,23 +50,38 @@ table {
 }
 
 th, td {
-border: 1px solid #dddddd;
-text-align: left;
-padding: 8px;
+    border: 2px solid #433b3b;
+    text-align: center;
+    padding: 8px;
 }
 
 th {
-background-color: #f2f2f2;
+    background-color: #dddbdb;
+}
+
+td {
+    background-color: #ffffff;
 }
 
 button {
-    padding: 10px;
-    margin: 10px;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
     border-radius: 5px;
-    border: 1px solid #dddddd;
-    background-color: #f2f2f2;
-    cursor: pointer;
+    background-color: #ebca38; /* Set your button background color */
+    color: #fff; /* Set your button text color */
+    border: 2px solid #ebca38; /* Set your button border color */
+    transition: background-color 0.3s, color 0.3s;
 }
+
+button:hover {
+    background-color: #2980b9; /* Set your button background color on hover */
+    color: #fff; /* Set your button text color on hover */
+  }
 
 #inicio {
     display: flex;
@@ -65,6 +91,11 @@ button {
 }
 
 #inicio img {
-    width: 300px;
-    margin-bottom: 10px;
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+label {
+    font-weight: bold;
+    margin: 2px;
 }
