@@ -1,6 +1,8 @@
 // API logic
 
 const Food = require('../database/models/Foods');
+const {OpenAI} = require("openai");
+const openai = new OpenAI({apiKey: `${process.env.OPEN_AI_KEY}`});
 
 // GET ALL FOODS
 const getAllFood = async (req, res) => {
@@ -24,7 +26,22 @@ const createFood = async (req, res) => {
     }
 }
 
+// Chat GPT question
+const ask1 = async (req, res) => {
+    try {
+        const chatCompletion = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [{"role": "user", "content": "Hey chat, are you ok ?"}],
+        });
+        console.log(chatCompletion.choices[0].message);
+        return res.json(chatCompletion.choices[0].message);
+    } catch (error) {
+        return res.json(error);
+    }
+}
+
 module.exports = {
     getAllFood,
-    createFood
+    createFood,
+    ask1
 }
