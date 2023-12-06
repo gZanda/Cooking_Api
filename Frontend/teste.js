@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const requestButton = document.getElementById('requestButton');
     const loading = document.getElementById('loading');
     const responseContainer = document.getElementById('responseContainer');
+    const registerButton = document.getElementById('registerButton');
 
     let loadingInterval;
 
@@ -41,6 +42,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function submitForm() {
+        const foodName = document.getElementById('foodName').value;
+        const foodAmount = document.getElementById('foodAmount').value;
+        console.log(foodName, foodAmount);
+    
+        axios.post('http://localhost:3333/createFood/', {
+            name: foodName,
+            amount: foodAmount,
+        })
+        .then(response => {
+            console.log('Success:', response.data);
+            // You can do something here with the response if needed
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
     // Attach the handleRequest function to the button click event
     requestButton.addEventListener('click', handleRequest);
+
+    // Attach the submitForm function to the form submission event
+    registerButton.addEventListener('click', submitForm);
 });
