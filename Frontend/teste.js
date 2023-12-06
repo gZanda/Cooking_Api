@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const responseContainer = document.getElementById('responseContainer');
     const registerButton = document.getElementById('registerButton');
     const requestButton2 = document.getElementById('requestButton2');
+    const requestButton3 = document.getElementById('requestButton3');
 
     let loadingInterval;
 
@@ -65,6 +66,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function handleRequest3() {
+        startLoadingAnimation();
+        responseContainer.innerText = ''; // Clear previous response
+
+        // Replace 'http://localhost:3333/ask1/' with your actual API endpoint
+        const apiUrl = 'http://localhost:3333/ask3/';
+
+        axios.get(apiUrl)
+            .then(response => {
+                // Handle the data as needed
+                const data = response.data;
+                responseContainer.innerText = data.content;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                responseContainer.innerText = 'Error fetching data';
+            })
+            .finally(() => {
+                stopLoadingAnimation();
+            });
+    }
+
     function submitForm() {
         const foodName = document.getElementById('foodName').value;
         const foodAmount = document.getElementById('foodAmount').value;
@@ -91,4 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach the handleRequest2 function to the button click event
     requestButton2.addEventListener('click', handleRequest2);
+
+    // Attach the handleRequest3 function to the button click event
+    requestButton3.addEventListener('click', handleRequest3);
 });
