@@ -1,3 +1,5 @@
+// API logic
+
 const Food = require('../database/models/Foods');
 
 // GET ALL FOODS
