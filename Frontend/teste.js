@@ -3,8 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const loading = document.getElementById('loading');
     const responseContainer = document.getElementById('responseContainer');
 
-    function handleRequest() {
+    let loadingInterval;
+
+    function startLoadingAnimation() {
         loading.classList.remove('hidden');
+        let dots = 0;
+        loadingInterval = setInterval(() => {
+            dots = (dots + 1) % 4;
+            loading.innerText = 'Loading' + ' .'.repeat(dots);
+        }, 500);
+    }
+
+    function stopLoadingAnimation() {
+        loading.classList.add('hidden');
+        clearInterval(loadingInterval);
+    }
+
+    function handleRequest() {
+        startLoadingAnimation();
         responseContainer.innerText = ''; // Clear previous response
 
         // Replace 'http://localhost:3333/ask2/' with your actual API endpoint
@@ -21,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 responseContainer.innerText = 'Error fetching data';
             })
             .finally(() => {
-                loading.classList.add('hidden');
+                stopLoadingAnimation();
             });
     }
 
