@@ -14,4 +14,7 @@ router.get('/foods/', foodController.getAllFood);
 // GET Chat GPT Response
 router.get('/ask1/', foodController.ask1);
 
+// GET Chat GPT Response 2
+router.get('/ask2/', foodController.ask2);
+
 module.exports = router;
