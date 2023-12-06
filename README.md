@@ -12,15 +12,15 @@ A aplicação incorpora uma API do chat GPT da OpenAI para respostas contextuais
 
 ### 📌 Tecnologias:
 
-- Node - v20.10.0
-- Npm - v10.2.3
-- Express - v4.18.2
-- PostgreSQL - Latest Docker Image
-- Sequelize ORM - v6.35.1
-- Cors Middleware - v2.8.5
-- Open AI API - v4.20.1
-- Axios - v1.6.2
-- Dotenv - v16.3.1
+- **Node** - v20.10.0
+- **Npm** - v10.2.3
+- **Express** - v4.18.2
+- **PostgreSQL** - Latest Docker Image
+- **Sequelize ORM** - v6.35.1
+- **Cors Middleware** - v2.8.5
+- **Open AI API** - v4.20.1
+- **Axios** - v1.6.2
+- **Dotenv** - v16.3.1
 
 ## 📜 Como executar a aplicação
 
