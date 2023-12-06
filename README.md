@@ -31,7 +31,7 @@ DB_PASSWORD=<sua_senha>
 OPEN_AI_KEY=<sua_open_ai_key>
 ```
 
-### 📌 :pushpin: Banco de Dados no Docker:
+### 📌 Banco de Dados no Docker:
 
 - Build do Composer:
 ```bash
