@@ -60,6 +60,6 @@ button {
 #inicio {
     display: flex;
     align-items: center;
-    gap: 32 px;
+    gap: 32px;
     padding: 24px 30px 24px 30px;
 }
