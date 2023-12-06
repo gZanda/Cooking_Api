@@ -26,7 +26,7 @@ A aplicação incorpora uma API do chat GPT da OpenAI para respostas contextuais
 
 ### 📌 Certifique-se de ter instalado:
 
-- node.js
+- node
 - npm
 ```bash
 node -v
