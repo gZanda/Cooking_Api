@@ -46,7 +46,7 @@ const ask2 = async (req, res) => {
         // code to make a LIST with all the foods NAMES and AMOUNTS from the database
         const foods = await Food.findAll();
         // Use map to create an array of strings for each food entry
-        const foodMessages = foods.map(food => `${food.amount} gramas de ${food.name}`);
+        const foodMessages = foods.map(food => `${food.amount} de ${food.name}`);
         // Join the array into a single string
         const message = `[${foodMessages.join(', ')}]`;
         // Ask Chat Gpt to generate a Recipe using the list of foods

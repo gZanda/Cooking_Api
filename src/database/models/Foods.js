@@ -13,7 +13,7 @@ const Foods = db.define('Foods', {
     unique: true,
   },
   amount: {
-    type: DataTypes.DOUBLE,
+    type: DataTypes.STRING,
     allowNull: false,
   }
 });
