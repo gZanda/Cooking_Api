@@ -1,7 +1,6 @@
 O sistema foi desenvolvido utilizando Node.js e Express para criar um servidor web eficiente.  
-A persistência de dados é gerenciada pelo ORM Sequelize, facilitando operações com bancos de dados relacionais. 
+A persistência de dados é gerenciada pelo ORM Sequelize, facilitando operações com bancos de dados relacionais.  
 A aplicação incorpora uma API de chat GPT da OpenAI para respostas contextuais e inteligentes. 
-O código segue boas práticas, é modular e organizado, proporcionando uma experiência de usuário aprimorada. 
 
 ### 📌 Tecnologias:
 
