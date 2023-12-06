@@ -1,4 +1,3 @@
-index.js
 document.addEventListener('DOMContentLoaded', () => {
     const requestButton = document.getElementById('requestButton');
     const loading = document.getElementById('loading');
