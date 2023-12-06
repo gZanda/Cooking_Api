@@ -28,3 +28,19 @@ input {
     margin-bottom: 10px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+}
+
+th, td {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+th {
+background-color: #f2f2f2;
+}
+  

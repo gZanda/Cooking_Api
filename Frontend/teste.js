@@ -22,6 +22,29 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(loadingInterval);
     }
 
+    async function fetchData() {
+        try {
+          const response = await axios.get('http://localhost:3333/foods/');
+          const foods = response.data;
+      
+          const tableBody = document.querySelector('#foodsTable tbody');
+      
+          foods.forEach(food => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${food.name}</td>
+              <td>${food.amount}</td>
+            `;
+            tableBody.appendChild(row);
+          });
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }
+      
+    // Call the fetchData function to display the foods on load
+    fetchData();
+
     function handleRequest() {
         startLoadingAnimation();
         responseContainer.innerText = ''; // Clear previous response
