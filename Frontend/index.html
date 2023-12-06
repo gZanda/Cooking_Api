@@ -1,70 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookchat</title>
-    <meta name="description" content= "Faça receitas incríveis com seus ingredientes disponíveis" >
-    <link rel="stylesheet" href="styles.css">
+    <title>Cook GPT</title>
+    <link rel="stylesheet" href="teste.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        /* Adicionando um pouco de estilo para posicionar a imagem acima do título */
+        #inicio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #inicio img {
+            width: 300px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <form id="foodForm">
+            <section id="inicio"> 
+                <img src="C:\Users\nicol\OneDrive\Desktop\Cooking_Api\img\prato.png" alt="Imagem Alimento" width="300"> 
+                <div>
+                    <h1> Cook GPT</h1>
+                    <p> As melhores receitas na palma da sua mão! </p>
+                </div>
+            </section> 
 
-    <main>
-        <div class="container">
-            <h1>Cookchat</h1>
-            <p>Descubra o potencial da sua despensa: faça receitas incríveis com os ingredientes disponíveis</p>
-        </div>
-
-        <div class="registro">
-            <h2>Alimento</h2>
-            <label for="alimentoUsuario">Insira o alimento disponível:</label>
-            <input type="text" id="alimentoUsuario" name="alimentoUsuario">
-
-            <h2>Quantidade (g)</h2>
-            <label for="quantidadeUsuario">Insira a quantidade disponível:</label>
-            <input type="text" id="quantidadeUsuario" name="quantidadeUsuario">
+            <br>
             
-        </div>
+            <label for="foodName">Alimento</label>
+            <br>
+            <input type="text" id="foodName" required>
 
-        <div class="botao">
-            <a href="Registrar" target="_blank"> Registrar </a>
-        </div>
+            <br>
 
-        <div class="table-container">
-            <div class="tabela">
-                <table border="1">
-                    <tr>
-                        <th>Alimento</th>
-                        <th>Quantidade</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+            <label for="foodAmount">Quantidade</label>
+            <br>
+            <input type="text" id="foodAmount" required>
 
-        <div class="botaogerar">
-            <a href="GerarReceitas" target="_blank"> Gerar Receitas </a>
-        </div>
+            <br>
 
-        <div class= "textarea-container" >
-            <textarea id="textoGrande1" name="textoGrande1" rows="5" cols="40"></textarea>
-            <textarea id="textoGrande2" name="textoGrande2" rows="5" cols="40"></textarea>
-        </div>
+            <button id="registerButton" onclick="submitForm()"> Registrar </button>
+        </form>
 
-    </main>
-    
+        <button id="deleteButton" onclick="deleteRequest()"> Limpar Tabela </button>
+
+        <table id="foodsTable">
+            <thead>
+                <tr>
+                    <th>Alimento</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table content will be added dynamically with JavaScript -->
+            </tbody>
+        </table>
+
+        <br>
+        <button id="requestButton" onclick="handleRequest()">Gerar Prato Comum</button>
+        <button id="requestButton2" onclick="handleRequest2()">Gerar Prato Fino</button>
+        <button id="requestButton3" onclick="handleRequest3()">Gerar Gambiarra</button>
+
+        <br>
+
+        <div id="loading" class="hidden">Loading</div>
+
+        <br>
+
+        <div id="responseContainer"></div>
+
+    </div>
+
+    <script src="teste.js"></script>
 </body>
+</html>
 
