@@ -8,11 +8,11 @@ Content-Type: application/json
 
 # Add Food to Database
 
-POST http://localhost:3333/addFood/
+POST http://localhost:3333/createFood/
 Content-Type: application/json
 
 {
-    "name": "Coca Cola",
+    "name": "A",
     "amount": 200
 }
 
