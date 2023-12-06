@@ -72,7 +72,9 @@ docker compose up -d
 node server.js
 ```
 
-### ⭐ Se necessário, instale localmente:
+## 📜 Caso tenha problemas com dependências
+
+### 📌 Instale localmente:
 
 - express -> WebServer
 - pg -> PostgreSQL Connection
