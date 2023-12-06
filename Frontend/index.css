@@ -1,3 +1,15 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background-image: url('Frontend/bg.png'); /* Caminho correto para sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1, h2, p, label, a {
+    font-family: 'Verdana', sans-serif;
+}
+
 .container {
     text-align: center;
     padding-top: 30px;
@@ -11,22 +23,23 @@
     margin-bottom: 40px;
 }
 
-.botao {
+.botao, .botaogerar {
     display: block;
     margin: 0 auto;
-    background-color: #ff7f50;
+    background-color: yellow;
+    border: 2px solid orange;
     border-radius: 8px;
-    padding: 10px 0px 0px 10px;
+    padding: 10px;
     width: 150px;
     height: 30px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .tabela {
     border-collapse: collapse;
-    width: 100%;
-    margin: 0 auto; 
+    width: 80%;
+    margin: 0 auto;
 }
 
 .tabela td, .tabela th {
@@ -36,23 +49,22 @@
 }
 
 .table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 5vh;
+    margin-left: 20%;
 }
 
 .botaogerar {
     display: block;
     margin: 0 auto;
-    background-color: #ff7f50;
+    background-color: yellow;
+    border: 2px solid orange;
     border-radius: 8px;
-    padding: 10px 0px 0px 10px;
+    padding: 10px;
     width: 150px;
     height: 30px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px; /* Ajuste conforme necessário para descer o botão */
 }
 
 a {
