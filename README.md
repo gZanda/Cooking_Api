@@ -41,4 +41,6 @@ npm install openai@^4.0.0
 npm install axios
 
 npm install dotenv
+
+npm install nodemon
 ```

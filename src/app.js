@@ -43,14 +43,14 @@ app.post('/addFood/', (req, res) => {
     .catch(error => res.json(error));
 });
 
-// GET
+// GET all foods and response with just the NAME and AMOUNT field
 app.get('/foods/', (req, res) => {
   Foods.findAll()
     .then(foods => res.json(foods))
     .catch(error => res.json(error));
 });
 
-// GET API 1
+// GET Chat Response
 app.get('/ask1', async (req, res) => {
   const chatCompletion = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",

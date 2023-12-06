@@ -5,3 +5,22 @@ Content-Type: application/json
 {}
 
 ###
+
+# Add Food to Database
+
+POST http://localhost:3000/addFood/
+Content-Type: application/json
+
+{
+    "name": "Pizza",
+    "amount": 300
+}
+
+###
+
+# Get All Foods From Database
+
+GET http://localhost:3000/foods/
+Content-Type: application/json
+
+{}
