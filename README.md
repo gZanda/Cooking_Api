@@ -43,4 +43,6 @@ npm install axios
 npm install dotenv
 
 npm install nodemon
+
+npm install cors
 ```

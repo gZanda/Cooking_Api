@@ -1,0 +1,12 @@
+.hidden {
+    display: none;
+}
+
+#loading {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#responseContainer {
+    white-space: pre-line; /* This will preserve newlines and spaces */
+}

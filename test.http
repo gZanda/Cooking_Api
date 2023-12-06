@@ -12,8 +12,8 @@ POST http://localhost:3333/createFood/
 Content-Type: application/json
 
 {
-    "name": "tomate",
-    "amount": 100
+    "name": "presunto",
+    "amount": 250
 }
 
 ###
