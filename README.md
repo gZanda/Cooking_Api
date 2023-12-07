@@ -7,6 +7,7 @@ A aplicação incorpora uma API do chat GPT da OpenAI para respostas contextuais
 
 ### 📌 Arquitetura:
 
+- RESTful
 - Cliente Servidor
 - MVC ( Model - View - Controller )
 
